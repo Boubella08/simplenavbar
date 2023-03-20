@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar Link Hover Effect</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav>
+        <a href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#Services">Services</a>
+        <a href="#Contact">Contact</a>
+      </nav>
+      <a href="#" id="link" target="_blank">My NavBar</a>
+    </div>
+    <style>
+      *,
+      *:before,
+      *:after {
+        padding: 0;
+        margin: 0;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+              -webkit-tap-highlight-color: transparent;
+              }
+      body {
+        background-color: #121317;
+      }
+      .wrapper {
+        height: 100vh;
+        display: -ms-grid;
+        display: grid;
+        place-items: center;
+        margin-top: -12%;
+      }
+      nav {
+        height: 70vh;
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        margin: auto;
+      }
+      nav a {
+        position: relative;
+        text-decoration: none;
+        color: #a0a0a0;
+        font-size: 18px;
+        letter-spacing: 0.5px;
+        padding: 0 10px;
+        font-weight: 500;
+      }
+      nav a:before,
+      nav a:after {
+        content: "";
+        position: absolute;
+        background-color: #f01818;
+        height: 3px;
+        width: 0;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+      }
+      nav a:after {
+        left: 0;
+        bottom: -10px;
+      }
+      nav a:before {
+        right: 0;
+        top: -10px;
+      }
+      nav a:hover {
+        color: #ffffff;
+      }
+      nav a:hover:after {
+        width: 100%;
+      }
+      nav a:hover:before {
+        width: 100%;
+      }
+      a#link {
+        display: block;
+        width: 90%;
+        background-color: #ff0505c0;
+        color: #121317;
+        padding: 15px 0;
+        text-align: center;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 20px;
+        border-radius: 7px;
+        -webkit-animation: scale 2s infinite;
+                animation: scale 2s infinite;
+      }
+      @-webkit-keyframes scale {
+        50% {
+          -webkit-transform: scale(0.92);
+                  transform: scale(0.92);
+        }
+      }
+      @keyframes scale {
+        50% {
+          -webkit-transform: scale(0.92);
+                  transform: scale(0.92);
+        }
+      }
+      @media screen and (max-width: 600px) {
+        nav {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+        }
+      }
+    </style>
+  </body>
+</html>
